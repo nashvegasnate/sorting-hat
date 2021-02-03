@@ -7,7 +7,7 @@ const printToDom = (divId, textToPrint) => {
     selectedDiv.innerHTML = textToPrint;
   }
 
-  function toggleFunc () {
+  function toggleFunc() {
   const hider = document.querySelector("#hiddenForm");
     if (hider.style.display === "none") {
       hider.style.display = "block";
@@ -34,8 +34,8 @@ const createStudentCards = () => {
 const handleButtonClick = (e) => {
 const studentName = document.querySelector("#studentName").value;
   const newStudent = {
-    studentName,
-    house: "Slytherin",
+    studentName, 
+    house: '',
   }
 
   studentArray.push(newStudent);
@@ -45,6 +45,7 @@ const studentName = document.querySelector("#studentName").value;
 
 const buttonEvents = () => {
   document.querySelector("#sortBtn").addEventListener('click', handleButtonClick);
+
 }
 
 
