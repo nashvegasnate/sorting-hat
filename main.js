@@ -19,12 +19,12 @@ const hider = document.querySelector("#hiddenForm");
 const createStudentCards = () => {
   let domString = '';
   studentArray.forEach((item, i) => {
-    domString += `<div class="card" style="width: 18rem;">
+    domString += `<div class="card m-2" style="width: 18rem;">
                     <div class="card-body">
                       <h5 class="card-title">${item.studentName}</h5>
                       <p class="card-text">${item.house}</p>
                       <a href="#" class="btn btn-primary">Expel</a>
-                    </div>;
+                    </div>
                   </div>`
   })
  
@@ -32,30 +32,44 @@ const createStudentCards = () => {
 }
 
 
+
 const handleButtonClick = (e) => {
 const studentName = document.querySelector("#studentName").value;
-  const newStudent = {
+ const house = random_item() 
+const newStudent = {
     studentName, 
     house,
   }
 
-  studentArray.push(newStudent);
-  createStudentCards();
+const warningMessage = () => {
+  let message = `<h6 class="text-danger">Please Enter Name</h6>`;
+  printToDom("#danger", message);
+
+}
+  if(studentName.length === 0) {
+    warningMessage();
+  } else {
+    studentArray.push(newStudent);
+
+  }
+
+
+  createStudentCards(studentArray);
+  document.querySelector("form").reset(); 
+
+  
 }
 
-// existing code above
 
-function random_item(house) {
+function random_item() {
+  const house = ["Gryffindor", "Slytherin", "Ravenclaw", "Hufflepuff"];
   return house[Math.floor(Math.random()*house.length)];
+
 }
 
-const house = ["Gryffindor", "Slytherin", "Ravenclaw", "Hufflepuff"];
-// console.log(random_item(house));
 
 
 
-
-// existing code below
 
 const buttonEvents = () => {
   document.querySelector("#sortBtn").addEventListener('click', handleButtonClick);
