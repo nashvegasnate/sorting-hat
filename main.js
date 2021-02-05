@@ -5,7 +5,7 @@ const studentArray = [];
 const printToDom = (divId, textToPrint) => {
   const selectedDiv = document.querySelector(divId);
     selectedDiv.innerHTML = textToPrint;
-  }
+  };
 
 function toggleFunc() {
 const hider = document.querySelector("#hiddenForm");
@@ -14,7 +14,7 @@ const hider = document.querySelector("#hiddenForm");
     } else {
     hider.style.display = "none";
   }
-}
+};
 
 const createStudentCards = () => {
   let domString = '';
@@ -29,13 +29,14 @@ const createStudentCards = () => {
   })
  
   printToDom('#studentCards', domString);
-}
+};
 
 
 
 const handleButtonClick = (e) => {
+
 const studentName = document.querySelector("#studentName").value;
- const house = random_item() 
+const house = random_item() 
 const newStudent = {
     studentName, 
     house,
@@ -58,14 +59,14 @@ const warningMessage = () => {
   document.querySelector("form").reset(); 
 
   
-}
+};
 
 
 function random_item() {
   const house = ["Gryffindor", "Slytherin", "Ravenclaw", "Hufflepuff"];
   return house[Math.floor(Math.random()*house.length)];
 
-}
+};
 
 
 
@@ -73,12 +74,11 @@ function random_item() {
 
 const buttonEvents = () => {
   document.querySelector("#sortBtn").addEventListener('click', handleButtonClick);
-
-}
+};
 
 
 const init = () => {
-    buttonEvents();
+  buttonEvents();
 };
 
 init();
