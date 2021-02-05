@@ -2,12 +2,14 @@ console.log("CONNECTED");
 
 const studentArray = [];
 
+const exStudents = [];
+
 const printToDom = (divId, textToPrint) => {
   const selectedDiv = document.querySelector(divId);
     selectedDiv.innerHTML = textToPrint;
   };
 
-function toggleFunc() {
+function goToggle() {
 const hider = document.querySelector("#hiddenForm");
   if (hider.style.display === "none") {
     hider.style.display = "block";
@@ -23,7 +25,7 @@ const createStudentCards = () => {
                     <div class="card-body">
                       <h5 class="card-title">${item.studentName}</h5>
                       <p class="card-text">${item.house}</p>
-                      <a href="#" class="btn btn-primary">Expel</a>
+                      <button type="button" id="${i}" class="btn btn-primary">Expel</button>
                     </div>
                   </div>`
   })
@@ -53,7 +55,11 @@ const warningMessage = () => {
     studentArray.push(newStudent);
 
   }
+  // takes all IDs and creates new array - sorting from low to high
+const studentIds = studentArray.map(student => student.id).sort((a, b) => a - b);
 
+// TERNARY OPERATOR- if studentArray is not empty, it creates an ID that is +1 of last item
+const id = studentIds.length ? studentIds[(studentIds.length - 1)] + 1 : 1;
 
   createStudentCards(studentArray);
   document.querySelector("form").reset(); 
@@ -70,10 +76,31 @@ function random_item() {
 
 
 
+const studentIds = exStudents.map((studentArray) => studentArray.id).sort((a, b) => a - b);
+const id = studentIds.length ? studentIds[studentIds.length - 1] + 1 : 1;
+
+const expelStudent = (e) => {
+  const targetType = e.target.type;
+  const targetId = e.target.id;
+  console.log(studentArray);
+  if (targetType === 'button') {
+ 
+  studentArray.splice(targetId, 1);
+
+}
+createStudentCards(studentArray);
+}
+
+
+
+
 
 
 const buttonEvents = () => {
   document.querySelector("#sortBtn").addEventListener('click', handleButtonClick);
+  document.querySelector("#toggleBtn").addEventListener('click', goToggle);
+  document.querySelector("#studentCards").addEventListener('click', expelStudent);
+
 };
 
 
