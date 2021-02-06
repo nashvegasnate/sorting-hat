@@ -18,8 +18,8 @@ Admin at Hogwarts
 -listener events for button clicks
 
 # Screenshots
-
-# Contributors
+https://github.com/nashvegasnate/sorting-hat/blob/main/SortingHat1.png# 
+Contributors
 Nathan Keith
 https://github.com/nashvegasnate
 
