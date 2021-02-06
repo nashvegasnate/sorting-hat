@@ -10,8 +10,9 @@
   outline-style: auto;
 }
 
-.student-form {
+#hiddenForm {
   display: block;
+  background-color: lightskyblue;
   padding: 10px;
   margin: 10px;
   outline-style: auto;

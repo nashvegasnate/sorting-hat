@@ -8,41 +8,34 @@
   <title>sorting hat</title>
 </head>
 <body>
-  <h1>SORTING HAT</h1>
- <!-- JUMBOTRON -->
+  
   <div class="jumbotron ">
-    <h1 class="display-4">Hello, world!</h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <h1 class="display-4">Wecome to Hoggy Hoggy Warts!</h1>
+    <p class="lead">Ministry-of-Magic mimubulus mimbletonia Pigwidgeon knut phoenix feather other minister Azkaban. Hedwig Daily Prophet treacle tart full-moon Ollivanders You-Know-Who cursed. Fawkes maze raw-steak Voldemort Goblin Wars snitch Forbidden forest grindylows wool socks. </p>
     <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <p>Restricted section the Burrow Wronski Feint gnomes, quidditch robes detention, chocolate frogs.</p>
     <p class="lead">
-      <a class="btn btn-primary btn-lg" href="#" role="button">Let's start sorting!</a>
+      <a class="btn btn-primary btn-lg" href="#" role="button" id="toggleBtn">Let's start sorting!</a>
     </p>
   </div>
 
-  <!-- STUDENT ENTRY FORM -->
-  <div class="student-form mb-3">
-    <h2 class="text-justify">Enter First Year's Name</h2>
-    <form id="student-form">
-    <div class="d-flex justify-content-around">  
-        <label for="Name" class="form-label">Student:</label>
-        <input type="text" class="form" id="name" required>  
-        <button type="submit" class="btn btn-primary">Sort!</button>    
+  <form>
+    <div id="hiddenForm" style="display:none" class="mb-3">
+      <label for="studentName" class="form-label">Enter Student's Name</label>
+      <input type="text" class="form-control" placeholder="name" id="studentName">
+      <button type="submit" id="sortBtn" class="btn btn-primary">Sort!</button>
     </div>
-    </form>
-  </div>
- 
-  <!-- HOUSE ASSIGNMENT CARDS -->
+  </form>
 
-<div class="card-container">
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title d-flex justify-content-around">First Year's Name</h5>
-      <p class="card-text d-flex justify-content-around">Assigned House</p>
-      <a href="#" class="btn btn-primary d-flex justify-content-around">Expel</a>
-    </div>
+  <div class="m-2" id="danger"></div>
+
+  <div class="d-flex flex-wrap" id="studentCards">
   </div>
-</div>
+  
+
+  
+
+
 
 
 
