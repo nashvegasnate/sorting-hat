@@ -47,13 +47,12 @@ const newStudent = {
 const warningMessage = () => {
   let message = `<h6 class="text-danger">Please Enter Name</h6>`;
   printToDom("#danger", message);
+  }
 
-}
   if(studentName.length === 0) {
     warningMessage();
   } else {
     studentArray.push(newStudent);
-
   }
 
 const studentIds = studentArray.map(student => student.id).sort((a, b) => a - b);
