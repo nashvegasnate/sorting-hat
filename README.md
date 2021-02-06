@@ -21,6 +21,7 @@ Admin at Hogwarts
 https://github.com/nashvegasnate/sorting-hat/blob/main/SortingHat1.png
 https://github.com/nashvegasnate/sorting-hat/blob/main/SortingHat2.png
 https://github.com/nashvegasnate/sorting-hat/blob/main/SortingHat3.png
+https://github.com/nashvegasnate/sorting-hat/blob/main/SortingHat4.png
 
 # Contributors
 Nathan Keith
