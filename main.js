@@ -55,10 +55,9 @@ const warningMessage = () => {
     studentArray.push(newStudent);
 
   }
-  // takes all IDs and creates new array - sorting from low to high
+
 const studentIds = studentArray.map(student => student.id).sort((a, b) => a - b);
 
-// TERNARY OPERATOR- if studentArray is not empty, it creates an ID that is +1 of last item
 const id = studentIds.length ? studentIds[(studentIds.length - 1)] + 1 : 1;
 
   createStudentCards(studentArray);
