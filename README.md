@@ -17,26 +17,20 @@ Admin at Hogwarts
 -ternary operator for creating unique ID
 -listener events for button clicks
 
-<<<<<<< HEAD
 
-# Screenshots
-
-=======
 # Screenshots
 https://github.com/nashvegasnate/sorting-hat/blob/main/SortingHat1.png
 https://github.com/nashvegasnate/sorting-hat/blob/main/SortingHat2.png
 https://github.com/nashvegasnate/sorting-hat/blob/main/SortingHat3.png
 https://github.com/nashvegasnate/sorting-hat/blob/main/SortingHat4.png
 
->>>>>>> 6a1f91974253f29cf7cb9bcecf39b2bcdb4d7d4b
+
 # Contributors
 Nathan Keith
 https://github.com/nashvegasnate
 
-# Link to Loom video
+# Link to deployed site
+https://infallible-ardinghelli-ffee19.netlify.app/
 
-<<<<<<< HEAD
-=======
 # Link to Loom video
->>>>>>> 6a1f91974253f29cf7cb9bcecf39b2bcdb4d7d4b
  https://www.loom.com/share/eec0ad4cfce9425a91e5e0d580eff035
